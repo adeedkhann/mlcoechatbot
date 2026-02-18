@@ -20,12 +20,12 @@ useEffect(()=>{
 
 
   const handleSubmit = async()=>{
-
+if (!prompt.trim()) return;
     const userMessage ={sender:'user' , text: prompt}
     setMessage(prev => [...prev, userMessage])
     const currentInput = prompt
     setPrompt("")
-    if (!prompt.trim()) return;
+    
     try {
       setLoading(true)
       const response = await axios.post(apiurl,{//api/chat/stream
@@ -53,11 +53,13 @@ useEffect(()=>{
           Powered by Advanced Intelligence
         </p>
       </div> </nav>
-      <div className='md:min-h-120 min-h-130 md:w-200 backdrop-blur-3xl rounded-3xl my-2 flex flex-1 h-130 [scrollbar-width:none] flex-col justify-center items-center overflow-y-auto'>
+      <div className='md:min-h-120 min-h-130 md:w-200 backdrop-blur-3xl rounded-3xl my-2 flex flex-1 h-120 [scrollbar-width:none] flex-col items-center overflow-y-auto'>
 
-          <img src={logo} className='h-20' alt="" />
+          <div className='justify-center flex flex-col items-center pt-10'>
+            <img src={logo} className='h-20' alt="" />
           <h2 className='text-[#527FB0] text-2xl my-1 md:my-5 mx-5 ' >Welcome to MLCoE AI Assistant</h2>
           <p className='text-[#527FB0]/50 mx-3 md:mx-20'>Your intelligent companion for Machine Learning Centre Of Excellence.</p>
+          </div>
           {message.length===0 && (
             <div className='flex mx-4 md:mx-20 mt-6 '>
             <span className='text-3xl my-auto p-1 rounded-md mr-2 text-[#011023] bg-white/75'><VscRobot/></span>
