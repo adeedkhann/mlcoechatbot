@@ -61,7 +61,7 @@ useEffect(()=>{
           {message.length===0 && (
             <div className='flex mx-4 md:mx-20 mt-6 '>
             <span className='text-3xl my-auto p-1 rounded-md mr-2 text-[#011023] bg-white/75'><VscRobot/></span>
-            <p className='bg-white/75 text-[#011023] rounded-2xl pl-5 mr-13 pr-2 py-2'>Hello! I'm the MLCoE AI Assistant. How can I assist you today?</p>
+            <p className='bg-white/75 text-[#011023] text-xl md:text-lg rounded-2xl pl-5 mr-13 pr-2 py-2'>Hello! I'm the MLCoE AI Assistant. How can I assist you today?</p>
           </div>
           )}
 
