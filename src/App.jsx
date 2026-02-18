@@ -53,7 +53,7 @@ if (!prompt.trim()) return;
           Powered by Advanced Intelligence
         </p>
       </div> </nav>
-      <div className='md:min-h-120 min-h-130 md:w-200 backdrop-blur-3xl rounded-3xl my-2 flex flex-1 h-120 [scrollbar-width:none] flex-col items-center overflow-y-auto'>
+      <div className='md:min-h-120 min-h-130 md:w-200 backdrop-blur-3xl rounded-3xl my-2 flex h-120 [scrollbar-width:none] flex-col items-center overflow-y-auto'>
 
           <div className='justify-center flex flex-col items-center pt-10'>
             <img src={logo} className='h-20' alt="" />
@@ -89,7 +89,7 @@ if (!prompt.trim()) return;
           <div ref={scrollRef} />
       </div>
 
-      <div className='backdrop-blur-3xl pl-3 mx-5 w-screen md:w-200 flex justify-center h-18 text-xl text-white rounded-2xl'>
+      <div className='backdrop-blur-3xl pl-3 fixed mx-5 w-screen md:w-200 flex justify-center h-18 text-xl text-white rounded-2xl'>
         <input value={prompt} onKeyDown={(e)=>{
           if(e.key==="Enter"){
             handleSubmit()
