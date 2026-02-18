@@ -68,18 +68,18 @@ useEffect(()=>{
           {message.map((msg , i)=>(
             msg.sender === "user"?
             <div key={i} className='flex mt-6  w-full justify-end px-3 md:px-20'>
-            <p className='bg-white/75 text-[#011023] rounded-2xl pl-5 pr-4 py-2 ml-13'>{msg.text}</p>
+            <p className='bg-white/75 text-[#011023] text-xl rounded-2xl pl-5 pr-4 py-2 ml-13'>{msg.text}</p>
             <span className='text-3xl rounded-md  my-auto p-0.5 ml-2 text-[#011023] bg-white/75'><FaRegUser/></span>
           </div>
           :<div key={i} className='flex w-full justify-start px-3 md:px-20 mb-3 mt-6 '>
             <span className='text-3xl my-auto p-1 rounded-md mr-2 text-[#011023] bg-white/75'><VscRobot/></span>
-            <p className='bg-white/75 text-[#011023] rounded-2xl pl-5 mr-13 pr-2 py-2'>{`${msg.text}`}</p>
+            <p className='bg-white/75 text-[#011023] text-xl rounded-2xl pl-5 mr-13 pr-2 py-2'>{`${msg.text}`}</p>
           </div>
           ))}
           {loading && (
       <div className='flex w-full justify-start px-3 md:px-20 mt-6 mb-3 animate-pulse'>
         <span className='text-3xl my-auto p-1 rounded-md mr-2 text-[#011023] bg-white/75'><VscRobot/></span>
-        <p className='bg-white/75 text-[#011023] rounded-2xl pl-5 pr-10 py-2'>AI is thinking...</p>
+        <p className='bg-white/75 text-[#011023] text-xl rounded-2xl pl-5 pr-10 py-2'>AI is thinking...</p>
       </div>
     )}
           
