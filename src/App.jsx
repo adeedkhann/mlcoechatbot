@@ -89,7 +89,7 @@ useEffect(()=>{
           <div ref={scrollRef} />
       </div>
 
-      <div className='backdrop-blur-3xl pl-3 fixed bottom-10 mx-5 w-screen md:w-200 flex justify-center h-18 text-xl text-white rounded-2xl'>
+      <div className='backdrop-blur-3xl pl-3 fixed bottom-5 mx-5 w-screen md:w-200 flex justify-center h-18 text-xl text-white rounded-2xl'>
         <input value={prompt} onKeyDown={(e)=>{
           if(e.key==="Enter"){
             handleSubmit()
