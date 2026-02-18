@@ -44,7 +44,7 @@ useEffect(()=>{
   }
 
   return (
-    <div className='bg-linear-to-t from-[#011023] via-[#052558] to-[#011023] h-screen flex flex-col items-center'>
+    <div className='bg-linear-to-t from-[#011023] via-[#052558] to-[#011023]  flex flex-col items-center h-screen'>
       <nav className='flex justify-center w-screen backdrop-blur-2xl h-15'><img className='transition-transform duration-500 w-15 hover:rotate-[360deg]' src={logo} alt="" /> <div>
         <h2 className='text-[#527FB0] text-2xl'>
           MLCoE AI Assistant
@@ -53,7 +53,7 @@ useEffect(()=>{
           Powered by Advanced Intelligence
         </p>
       </div> </nav>
-      <div className='md:min-h-120 min-h-130 md:w-200 backdrop-blur-3xl rounded-3xl my-2 flex h-120 [scrollbar-width:none] flex-col justify-center items-center overflow-y-auto'>
+      <div className='md:min-h-120 min-h-130 md:w-200 backdrop-blur-3xl rounded-3xl my-2 flex flex-1 h-130 [scrollbar-width:none] flex-col justify-center items-center overflow-y-auto'>
 
           <img src={logo} className='h-20' alt="" />
           <h2 className='text-[#527FB0] text-2xl my-1 md:my-5 mx-5 ' >Welcome to MLCoE AI Assistant</h2>
