@@ -28,7 +28,7 @@ useEffect(()=>{
     if (!prompt.trim()) return;
     try {
       setLoading(true)
-      const response = await axios.post("/api/chat/stream",{
+      const response = await axios.post("https://chatbot-mlcoe.onrender.com/chat/stream",{//api/chat/stream
         question:currentInput
       })
       const botMessage = {sender:"bot",text:response.data}
