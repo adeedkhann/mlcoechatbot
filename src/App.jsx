@@ -20,12 +20,12 @@ useEffect(()=>{
 
 
   const handleSubmit = async()=>{
-if (!prompt.trim()) return;
+
     const userMessage ={sender:'user' , text: prompt}
     setMessage(prev => [...prev, userMessage])
     const currentInput = prompt
     setPrompt("")
-    
+    if (!prompt.trim()) return;
     try {
       setLoading(true)
       const response = await axios.post(apiurl,{//api/chat/stream
@@ -89,7 +89,7 @@ if (!prompt.trim()) return;
           <div ref={scrollRef} />
       </div>
 
-      <div className='backdrop-blur-3xl pl-3 fixed mx-5 w-screen md:w-200 flex justify-center h-18 text-xl text-white rounded-2xl'>
+      <div className='backdrop-blur-3xl pl-3 fixed bottom-10 mx-5 w-screen md:w-200 flex justify-center h-18 text-xl text-white rounded-2xl'>
         <input value={prompt} onKeyDown={(e)=>{
           if(e.key==="Enter"){
             handleSubmit()
