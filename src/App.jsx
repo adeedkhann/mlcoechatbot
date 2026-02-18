@@ -53,7 +53,7 @@ useEffect(()=>{
           Powered by Advanced Intelligence
         </p>
       </div> </nav>
-      <div className='md:min-h-120 min-h-130 md:w-200 backdrop-blur-3xl rounded-3xl my-2 flex h-120 [scrollbar-width:none] flex-col items-center overflow-y-auto'>
+      <div className='md:min-h-120 min-h-130 md:w-200 backdrop-blur-3xl rounded-3xl mt-2 mb-25 flex flex-1 [scrollbar-width:none] flex-col items-center overflow-y-auto'>
 
           <div className='justify-center flex flex-col items-center pt-10'>
             <img src={logo} className='h-20' alt="" />
