@@ -7,7 +7,7 @@ import { FaRegUser } from "react-icons/fa";
 
 function App() {
 
-// const apiurl = import.meta.env.VITE_CHAT_BOT_API
+const apiurl = import.meta.env.VITE_CHAT_BOT_API
   const scrollRef = useRef()
   const [prompt , setPrompt] = useState("")
   // const [result , setResult ] = useState("")
@@ -28,7 +28,7 @@ useEffect(()=>{
     if (!prompt.trim()) return;
     try {
       setLoading(true)
-      const response = await axios.post("https://chatbot-mlcoe.onrender.com/chat/stream",{//api/chat/stream
+      const response = await axios.post(apiurl,{//api/chat/stream
         question:currentInput
       })
       const botMessage = {sender:"bot",text:response.data}
